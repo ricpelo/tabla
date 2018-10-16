@@ -5,22 +5,27 @@
         <title>Tabla de multiplicar</title>
     </head>
     <body>
-        <?php
-        $numero = 8;
+        <?php $numero = 8; ?>
 
-        echo '<table border="1">';
-        echo "<thead>";
-        echo "<th>$numero</th><th>x</th><th>n</th><th> = </th><th>m</th>";
-        echo "</thead>";
-        echo "<tbody>";
-
-        for ($i = 0; $i <= 10; $i++) {
-            $res = $numero * $i;
-            echo "<tr><td>$numero</td><td>x</td><td>$i</td><td> = </td><td>$res</td></tr>";
-        }
-
-        echo "</tbody>";
-        echo "</table>";
-        ?>
+        <table border="1">
+            <thead>
+                <th><?= $numero ?></th>
+                <th>x</th>
+                <th>n</th>
+                <th> = </th>
+                <th>m</th>
+            </thead>
+            <tbody>
+                <?php for ($i = 0; $i <= 10; $i++): ?>
+                    <tr>
+                        <td><?= $numero ?></td>
+                        <td>x</td>
+                        <td><?= $i ?></td>
+                        <td> = </td>
+                        <td><?= $numero * $i ?></td>
+                    </tr>
+                <?php endfor ?>
+            </tbody>
+        </table>
     </body>
 </html>
